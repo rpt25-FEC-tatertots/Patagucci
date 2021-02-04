@@ -42,7 +42,7 @@ App.get('/overview/:productID', (req, res) => {
     })
 })
 App.get('/overview', (req, res) => {
-  axios.get(`http://localhost:5004/overview`)
+  axios.get(`http://localhost:5004`)
     .then(response => {
       res.send(response.data);
     })
