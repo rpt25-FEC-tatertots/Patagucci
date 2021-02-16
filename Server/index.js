@@ -50,14 +50,14 @@ App.get('/photos', (req, res) => {
     .catch((err) => console.log(err))
 })
 App.get('/overview/:productID', (req, res) => {
-  axios.get(`http://localhost:5007/overview/${req.params.productID}`)
+  axios.get(`http://3.16.235.27:5007/overview/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/overview', (req, res) => {
-  axios.get(`http://localhost:5007`)
+  axios.get(`http://3.16.235.27:5007`)
     .then(response => {
       res.send(response.data);
     })
@@ -120,4 +120,5 @@ App.get('/images/detailedImages/:productID', function (req, res) {
     })
     .catch((err) => console.log(err))
 })
+App.get('')
 App.listen(Port, () => console.log(`Server is listening on port ${Port}`))
