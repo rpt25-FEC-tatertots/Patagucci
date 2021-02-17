@@ -64,14 +64,14 @@ App.get('/overview', (req, res) => {
     .catch((err) => console.log(err))
 })
 App.get('/similar', (req, res) => {
-  axios.get(`http://localhost:5008/similar`)
+  axios.get(`http://3.16.235.27:5008/similar`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/similar/:productID', (req, res) => {
-  axios.get(`http://localhost:5008/similar/${req.params.productID}`)
+  axios.get(`http://3.16.235.27:5008/similar/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
@@ -97,14 +97,6 @@ App.get('/images/thumbnailImages/:productID', function (req, res) {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
-})
-App.get('/images/thumbnailImages/:productID', function (req, res) {
-  axios.get(`http://localhost:5003/images/thumbnailImages/${req.params.productID}`)
-    .then(response => {
-      res.send(response.data);
-    })
-    .catch((err) => console.log(err))
-
 })
 App.get('/images/mainImages/:productID', function (req, res) {
   axios.get(`http://localhost:5003/images/mainImages/${req.params.productID}`)
