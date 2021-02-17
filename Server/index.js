@@ -121,14 +121,14 @@ App.get('/images/detailedImages/:productID', function (req, res) {
     .catch((err) => console.log(err))
 })
 App.get('/locations/:productID', function (req, res) {
-  axios.get(`http://18.220.150.96:5002/locations/${req.params.productID}`)
+  axios.get(` http://3.136.32.206:5002/locations/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/materials/:productID', function (req, res) {
-  axios.get(`http://18.220.150.96:5002/materials/${req.params.productID}`)
+  axios.get(` http://3.136.32.206:5002/materials/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
