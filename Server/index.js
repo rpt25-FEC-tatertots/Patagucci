@@ -36,14 +36,14 @@ App.get('/inventory/:productID', (req, res) => {
     .catch((err) => console.log(err))
 })
 App.get('/photos/:productID', (req, res) => {
-  axios.get(`http://54.241.34.87:5001/photos/${req.params.productID}`)
+  axios.get(`http://3.136.32.206:5001/photos/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/photos', (req, res) => {
-  axios.get(`http://54.241.34.87:5001/photos/`)
+  axios.get(`http://3.136.32.206:5001/photos/`)
     .then(response => {
       res.send(response.data);
     })
@@ -78,35 +78,35 @@ App.get('/similar/:productID', (req, res) => {
     .catch((err) => console.log(err))
 })
 App.get('/images/:productID', (req, res) => {
-  axios.get(`http://localhost:5003/images/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5003/images/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/images', (req, res) => {
-  axios.get(`http://localhost:5003`)
+  axios.get(`http://54.241.34.87:5003`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/images/thumbnailImages/:productID', function (req, res) {
-  axios.get(`http://localhost:5003/images/thumbnailImages/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5003/images/thumbnailImages/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/images/mainImages/:productID', function (req, res) {
-  axios.get(`http://localhost:5003/images/mainImages/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5003/images/mainImages/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/images/detailedImages/:productID', function (req, res) {
-  axios.get(`http://localhost:5003/images/detailedImages/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5003/images/detailedImages/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
