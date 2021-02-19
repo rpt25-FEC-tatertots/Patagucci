@@ -8,42 +8,42 @@ App.use(cors());
 App.use('/:productId', express.static('./Public'))
 
 App.get('/product/:productID', (req, res) => {
-  axios.get(`http://localhost:5004/product/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5004/product/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/title/:productID', (req, res) => {
-  axios.get(`http://localhost:5005/title/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5005/title/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/reviews/:productID', (req, res) => {
-  axios.get(`http://localhost:5005/reviews/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5005/reviews/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/inventory/:productID', (req, res) => {
-  axios.get(`http://localhost:5004/inventory/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5004/inventory/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/photos/:productID', (req, res) => {
-  axios.get(`http://localhost:5001/photos/${req.params.productID}`)
+  axios.get(`http://54.241.34.87:5001/photos/${req.params.productID}`)
     .then(response => {
       res.send(response.data);
     })
     .catch((err) => console.log(err))
 })
 App.get('/photos', (req, res) => {
-  axios.get(`http://localhost:5001/photos/`)
+  axios.get(`http://54.241.34.87:5001/photos/`)
     .then(response => {
       res.send(response.data);
     })
