@@ -3,7 +3,9 @@ const App = express();
 const Port = process.env.PORT || 5000
 const axios = require('axios');
 const cors = require('cors');
+const compression = require('compression')
 
+App.use(compression());
 App.use(cors());
 App.use('/:productId', express.static('./Public'))
 
