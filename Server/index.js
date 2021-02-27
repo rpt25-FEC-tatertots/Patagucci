@@ -14,7 +14,10 @@ App.get('/product/:productID', (req, res) => {
     .then(response => {
       res.send(response.data);
     })
-    .catch((err) => console.log(err))
+    .catch((err) => {
+      console.log(err)
+      res.status(500).send(err)
+    })
 })
 App.get('/title/:productID', (req, res) => {
   axios.get(`http://54.241.34.87:5005/title/${req.params.productID}`)
